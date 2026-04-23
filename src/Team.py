@@ -8,9 +8,10 @@ import typing
 import json
 
 class Team:
-    def __init__(self, athletes: list[Athlete], entries: list[Entry]):
+    def __init__(self, team_name:str, athletes: list[Athlete], entries: list[Entry]):
         self.athletes = athletes
         self.entries = entries
+        self.team_name = team_name
 
     @classmethod
     def from_file(cls, json_path:str) -> typing.Self:
@@ -28,10 +29,13 @@ class Team:
         for entry in data["entries"]:
             entries.append(Entry(entry["event"], entry["name"], entry["pr"]))
 
-        return cls(athletes, entries)
+        # Create a field for team_name
+        team_name = data["team_name"]
+
+        return cls(team_name, athletes, entries)
     
 
 if __name__ == "__main__":
     print("Reading a team from a file: ")
     test_1 = Team.from_file("tests/TeamTest.json")
-    print(f"{test_1.athletes}, {test_1.entries}")
+    print(f"{test_1.team_name}, {test_1.athletes}, {test_1.entries}")
