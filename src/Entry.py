@@ -1,59 +1,30 @@
 """
-    Contains a data structure that holds information for any team's entries into one event.
-
-    An entry contains an event name as well as a list of athletes that the team is putting into the event.
-    When it comes to making the final simulaiton, all the teams' entries must be combined. 
+Purpose: An instance of this class represents a team's entries by event
 """
-
 import json
-import Athlete
-import Constants
+import typing
+
 
 class Entry:
-    event = ""
-    athletes: list[Athlete.Athlete] = []
+    def __init__(self, event_name:str, athlete_name:str, athlete_pr:float):
+        self.event = event_name
+        self.name = athlete_name
+        self.pr = athlete_pr
 
-    def __init__(self, pathToJSON:str="",  JSONString:str=""):
-        if pathToJSON or JSONString:
-            if pathToJSON:
-                self.fromJSON(pathToJSON)
-            else:
-                self.fromJSON(JSONString=JSONString)
+    @classmethod
+    def from_file(cls, json_path:str) -> typing.Self:
+        data = {}
+        with open(json_path, 'r') as f:
+            data = json.load(f)
+        return cls(data["event"], data["name"], data["pr"])
+    
 
+if __name__ == "__main__":
+    print("Loading an entry from a file: ")
+    test_1 = Entry.from_file("tests/EntryTest.json")
+    print(f"{test_1.event}, {test_1.name}, {test_1.pr}")
 
-    def toJSON(self)->str:
-        data = {
-            "event": self.event,
-            "athletes": []
-        }
-        for athlete in self.athletes:
-            data["athletes"].append({
-                "name": athlete.name,
-                "gender": athlete.gender,
-                "events": athlete.events
-            })
-        return json.dumps(data, indent=4)
-        
-    def fromJSON(self, pathToJSON:str="", JSONString:str=""):
-        if pathToJSON or JSONString:
-            data = {}
-            if pathToJSON:
-                with open(pathToJSON, 'r') as f:
-                    data = json.load(f)
-            else:
-                data = json.loads(JSONString)
-            
-            if data["event"] not in Constants.ALLOWED_EVENTS:
-                raise ValueError("Tried to process an entry for an invalid event!")
-            else:
-                self.event = data["event"]
-
-            for athleteDict in data["athletes"]:
-                self.athletes.append(Athlete.Athlete(JSONString=json.dumps(athleteDict)))
-        else:
-            raise ValueError("fromJSON needs either a path or valid JSON String")
-        
-
-if __name__ == "__main__": 
-    testEntry1 = Entry("test/Entry.json")
-    print(testEntry1.toJSON())
+    print()
+    print("Creating an Entry normally:")
+    test_2 = Entry("400", "Josh Eager", 54.8)
+    print(f"{test_2.event}, {test_2.name}, {test_2.pr}")

@@ -1,44 +1,37 @@
 """
-    Contains a class to represent any team. A team *can* contain a list of athletes, which will enable it to be optimized for. 
-    Otherwise, it will contain a list of entries (Entry objects). These entries and list of athletes are used to apply the
-    entry optimization. The optimization process will simply alter the team's list of entries to be the most effecient. 
-
+Purpose: An instance of this class represents a track team. 
 """
+
+from Athlete import Athlete
+from Entry import Entry
+import typing
 import json
-import Athlete
-import Entry
 
-class Team: 
-    name = ""
-    gender = ""
+class Team:
+    def __init__(self, athletes: list[Athlete], entries: list[Entry]):
+        self.athletes = athletes
+        self.entries = entries
 
-    entries = []
-    athletes: list[Athlete.Athlete] = []
+    @classmethod
+    def from_file(cls, json_path:str) -> typing.Self:
+        data = {}
+        with open(json_path, 'r') as f:
+            data = json.load(f)
+        
+        # Create a list of athletes from the JSON file
+        athletes: list[Athlete] = []
+        for athlete in data["athletes"]:
+            athletes.append(Athlete(athlete["name"], athlete["gender"], athlete["events"]))
 
-    """
-    Every team needs to contain a list of their entries and optionally a list of their athletes. 
+        # Create a list of entries from the JSON file
+        entries: list[Entry] = []
+        for entry in data["entries"]:
+            entries.append(Entry(entry["event"], entry["name"], entry["pr"]))
 
-    Athletes can either be initialized by a string that is a json dump or a path to a json object. 
-
-    """
-    def __init__(self, athletesJSONString:str="", pathToAthletesJSON:str="", entriesJSONString:str="", pathToEntriesJSON:str=""):
-        # Initialize the list of athletes from either a valid JSON string or a JSON file
-        if athletesJSONString:
-            data = json.loads(athletesJSONString)
-            for athleteDict in data:
-                newAthlete = Athlete.Athlete(JSONString=json.dumps(athleteDict))
-                self.athletes.append(newAthlete)
-        else:
-            with open(pathToAthletesJSON, 'r') as f:
-                data = json.load(f)
-                for athleteDict in data:
-                    newAthlete = Athlete.Athlete(JSONString=json.dumps(athleteDict))
-                    self.athletes.append(newAthlete)
-
+        return cls(athletes, entries)
+    
 
 if __name__ == "__main__":
-    testTeam1 = Team(pathToAthletesJSON="tests/Athletes.json")
-
-    print("Loading a list of athletes from a file: ")
-    for athlete in testTeam1.athletes:
-        print(athlete.toJSON())
+    print("Reading a team from a file: ")
+    test_1 = Team.from_file("tests/TeamTest.json")
+    print(f"{test_1.athletes}, {test_1.entries}")
