@@ -4,7 +4,9 @@ Purpose: An instance of this class represents a track and field meet.
 
 import json
 import typing
+import Simulation
 from Team import Team
+from Result import Result
 
 class Meet:
     def __init__(self, teams:list[Team]):
@@ -28,3 +30,10 @@ if __name__ == "__main__":
     print("Load a meet from a file: ")
     test_1 = Meet.from_file("tests/MeetTest.json")
     print(f"{test_1.teams}")
+
+    print()
+    print("Simulate a meet: ")
+    result:Result =  Simulation.simulate(test_1.teams)
+    result.print_team_scores()
+    print()
+    result.print_event_scores()

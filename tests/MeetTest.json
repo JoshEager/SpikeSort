@@ -7,29 +7,29 @@
                     "name": "Josh Eager",
                     "gender": "male",
                     "events": {
-                        "100": 12.0,
-                        "200": 24.8,
-                        "400": 54.8
+                        "100m": 12.0,
+                        "200m": 24.8,
+                        "400m": 54.8
                     }
                 },
                 {
                     "name": "Lawson Cooper",
                     "gender": "male",
                     "events": {
-                        "100": 11.9,
-                        "200": 24.5,
-                        "400": 55.8
+                        "100m": 11.9,
+                        "200m": 24.5,
+                        "400m": 55.8
                     }
                 }
             ],
             "entries": [
                 {
-                    "event": "400",
+                    "event": "400m",
                     "name": "Josh Eager",
                     "pr": "54.8"
                 },
                 {
-                    "event": "long_jump",
+                    "event": "Long Jump",
                     "name": "Lawson Cooper",
                     "pr": "21"
                 }
@@ -42,29 +42,29 @@
                     "name": "Luke Thomas",
                     "gender": "male",
                     "events": {
-                        "100": 12.0,
-                        "200": 24.8,
-                        "400": 54.8
+                        "100m": 12.0,
+                        "200m": 24.8,
+                        "400m": 54.8
                     }
                 },
                 {
                     "name": "Julius Johnson",
                     "gender": "male",
                     "events": {
-                        "100": 11.9,
-                        "200": 24.5,
-                        "400": 55.8
+                        "100m": 11.9,
+                        "200m": 24.5,
+                        "400m": 55.8
                     }
                 }
             ],
             "entries": [
                 {
-                    "event": "400",
+                    "event": "400m",
                     "name": "Luke Thomas",
                     "pr": "52"
                 },
                 {
-                    "event": "shot_put",
+                    "event": "Shotput",
                     "name": "Julius Johnson",
                     "pr": "45"
                 }

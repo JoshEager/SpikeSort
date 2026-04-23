@@ -18,6 +18,9 @@ class Entry:
             data = json.load(f)
         return cls(data["event"], data["name"], data["pr"])
     
+    def print_entry(self):
+        print(f"{self.name}:\t{self.pr}")
+    
 
 if __name__ == "__main__":
     print("Loading an entry from a file: ")
