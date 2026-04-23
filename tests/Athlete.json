@@ -1,0 +1,8 @@
+{
+    "name": "Joe Schmo",
+    "gender": "male",
+    "events": {
+        "100": 11.5,
+        "200": 24
+    }
+}
