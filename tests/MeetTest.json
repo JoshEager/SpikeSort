@@ -1,0 +1,74 @@
+{
+    "teams": [
+        {
+            "team_name": "Brown City",
+            "athletes": [
+                {
+                    "name": "Josh Eager",
+                    "gender": "male",
+                    "events": {
+                        "100": 12.0,
+                        "200": 24.8,
+                        "400": 54.8
+                    }
+                },
+                {
+                    "name": "Lawson Cooper",
+                    "gender": "male",
+                    "events": {
+                        "100": 11.9,
+                        "200": 24.5,
+                        "400": 55.8
+                    }
+                }
+            ],
+            "entries": [
+                {
+                    "event": "400",
+                    "name": "Josh Eager",
+                    "pr": "54.8"
+                },
+                {
+                    "event": "long_jump",
+                    "name": "Lawson Cooper",
+                    "pr": "21"
+                }
+            ]
+        },
+        {
+            "team_name": "Marlette",
+            "athletes": [
+                {
+                    "name": "Luke Thomas",
+                    "gender": "male",
+                    "events": {
+                        "100": 12.0,
+                        "200": 24.8,
+                        "400": 54.8
+                    }
+                },
+                {
+                    "name": "Julius Johnson",
+                    "gender": "male",
+                    "events": {
+                        "100": 11.9,
+                        "200": 24.5,
+                        "400": 55.8
+                    }
+                }
+            ],
+            "entries": [
+                {
+                    "event": "400",
+                    "name": "Luke Thomas",
+                    "pr": "52"
+                },
+                {
+                    "event": "shot_put",
+                    "name": "Julius Johnson",
+                    "pr": "45"
+                }
+            ]
+        }
+    ]
+}

@@ -34,6 +34,24 @@ class Team:
 
         return cls(team_name, athletes, entries)
     
+    @classmethod
+    def from_dict(cls, dictionary:dict[str, typing.Any]) -> typing.Self:
+        data = dictionary        
+        # Create a list of athletes from the JSON string
+        athletes: list[Athlete] = []
+        for athlete in data["athletes"]:
+            athletes.append(Athlete(athlete["name"], athlete["gender"], athlete["events"]))
+
+        # Create a list of entries from the JSON string
+        entries: list[Entry] = []
+        for entry in data["entries"]:
+            entries.append(Entry(entry["event"], entry["name"], entry["pr"]))
+
+        # Create a field for team_name
+        team_name = data["team_name"]
+
+        return cls(team_name, athletes, entries)
+    
 
 if __name__ == "__main__":
     print("Reading a team from a file: ")
