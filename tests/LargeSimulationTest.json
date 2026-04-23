@@ -1,0 +1,352 @@
+{
+  "teams": [
+    {
+      "team_name": "North High",
+      "athletes": [
+        {
+          "name": "Alice Smith",
+          "gender": "female",
+          "events": {
+            "100m": 12.1,
+            "200m": 24.5,
+            "400m": 56.2,
+            "Long Jump": 5.2
+          }
+        },
+        {
+          "name": "Bob Jones",
+          "gender": "male",
+          "events": {
+            "100m": 11.2,
+            "200m": 22.8,
+            "Long Jump": 6.8,
+            "Triple Jump": 13.5
+          }
+        },
+        {
+          "name": "Charlie Brown",
+          "gender": "male",
+          "events": {
+            "800m": 115.0,
+            "1600m": 260.0,
+            "3200m": 570.0
+          }
+        },
+        {
+          "name": "Diana Prince",
+          "gender": "female",
+          "events": {
+            "Shotput": 12.5,
+            "Discus": 35.0,
+            "High Jump": 1.65
+          }
+        }
+      ],
+      "entries": [
+        {
+          "event": "100m",
+          "name": "Alice Smith",
+          "pr": 12.1
+        },
+        {
+          "event": "200m",
+          "name": "Alice Smith",
+          "pr": 24.5
+        },
+        {
+          "event": "100m",
+          "name": "Bob Jones",
+          "pr": 11.2
+        },
+        {
+          "event": "200m",
+          "name": "Bob Jones",
+          "pr": 22.8
+        },
+        {
+          "event": "Long Jump",
+          "name": "Bob Jones",
+          "pr": 6.8
+        },
+        {
+          "event": "800m",
+          "name": "Charlie Brown",
+          "pr": 115.0
+        },
+        {
+          "event": "1600m",
+          "name": "Charlie Brown",
+          "pr": 260.0
+        },
+        {
+          "event": "Shotput",
+          "name": "Diana Prince",
+          "pr": 12.5
+        },
+        {
+          "event": "Discus",
+          "name": "Diana Prince",
+          "pr": 35.0
+        }
+      ]
+    },
+    {
+      "team_name": "South High",
+      "athletes": [
+        {
+          "name": "Eve Adams",
+          "gender": "female",
+          "events": {
+            "100m": 11.9,
+            "200m": 24.0,
+            "400m": 55.0
+          }
+        },
+        {
+          "name": "Frank Miller",
+          "gender": "male",
+          "events": {
+            "110h": 14.5,
+            "300h": 38.2,
+            "400m": 49.5
+          }
+        },
+        {
+          "name": "Grace Hopper",
+          "gender": "female",
+          "events": {
+            "800m": 135.0,
+            "1600m": 310.0,
+            "3200m": 660.0
+          }
+        },
+        {
+          "name": "Hank Hill",
+          "gender": "male",
+          "events": {
+            "Shotput": 15.0,
+            "Discus": 42.0,
+            "Pole Vault": 4.5
+          }
+        }
+      ],
+      "entries": [
+        {
+          "event": "100m",
+          "name": "Eve Adams",
+          "pr": 11.9
+        },
+        {
+          "event": "200m",
+          "name": "Eve Adams",
+          "pr": 24.0
+        },
+        {
+          "event": "110h",
+          "name": "Frank Miller",
+          "pr": 14.5
+        },
+        {
+          "event": "300h",
+          "name": "Frank Miller",
+          "pr": 38.2
+        },
+        {
+          "event": "800m",
+          "name": "Grace Hopper",
+          "pr": 135.0
+        },
+        {
+          "event": "1600m",
+          "name": "Grace Hopper",
+          "pr": 310.0
+        },
+        {
+          "event": "Shotput",
+          "name": "Hank Hill",
+          "pr": 15.0
+        },
+        {
+          "event": "Discus",
+          "name": "Hank Hill",
+          "pr": 42.0
+        },
+        {
+          "event": "Pole Vault",
+          "name": "Hank Hill",
+          "pr": 4.5
+        }
+      ]
+    },
+    {
+      "team_name": "East High",
+      "athletes": [
+        {
+          "name": "Ivy League",
+          "gender": "female",
+          "events": {
+            "100m": 12.5,
+            "200m": 25.2,
+            "Long Jump": 5.5
+          }
+        },
+        {
+          "name": "Jack Sparrow",
+          "gender": "male",
+          "events": {
+            "400m": 50.1,
+            "800m": 118.0,
+            "1600m": 275.0
+          }
+        },
+        {
+          "name": "Kelly Clarkson",
+          "gender": "female",
+          "events": {
+            "Shotput": 10.0,
+            "Discus": 30.0,
+            "High Jump": 1.70
+          }
+        },
+        {
+          "name": "Leo Messi",
+          "gender": "male",
+          "events": {
+            "100m": 11.5,
+            "200m": 23.1,
+            "400m": 52.0
+          }
+        }
+      ],
+      "entries": [
+        {
+          "event": "100m",
+          "name": "Ivy League",
+          "pr": 12.5
+        },
+        {
+          "event": "Long Jump",
+          "name": "Ivy League",
+          "pr": 5.5
+        },
+        {
+          "event": "400m",
+          "name": "Jack Sparrow",
+          "pr": 50.1
+        },
+        {
+          "event": "800m",
+          "name": "Jack Sparrow",
+          "pr": 118.0
+        },
+        {
+          "event": "Shotput",
+          "name": "Kelly Clarkson",
+          "pr": 10.0
+        },
+        {
+          "event": "High Jump",
+          "name": "Kelly Clarkson",
+          "pr": 1.70
+        },
+        {
+          "event": "100m",
+          "name": "Leo Messi",
+          "pr": 11.5
+        },
+        {
+          "event": "200m",
+          "name": "Leo Messi",
+          "pr": 23.1
+        }
+      ]
+    },
+    {
+      "team_name": "West High",
+      "athletes": [
+        {
+          "name": "Mia Hamm",
+          "gender": "female",
+          "events": {
+            "100m": 12.2,
+            "200m": 24.8,
+            "400m": 57.0
+          }
+        },
+        {
+          "name": "Noah Centineo",
+          "gender": "male",
+          "events": {
+            "1600m": 255.0,
+            "3200m": 555.0
+          }
+        },
+        {
+          "name": "Olivia Rodrigo",
+          "gender": "female",
+          "events": {
+            "High Jump": 1.75,
+            "Long Jump": 5.8,
+            "Pole Vault": 3.8
+          }
+        },
+        {
+          "name": "Peter Parker",
+          "gender": "male",
+          "events": {
+            "100m": 10.9,
+            "200m": 22.1,
+            "400m": 48.9
+          }
+        }
+      ],
+      "entries": [
+        {
+          "event": "100m",
+          "name": "Mia Hamm",
+          "pr": 12.2
+        },
+        {
+          "event": "400m",
+          "name": "Mia Hamm",
+          "pr": 57.0
+        },
+        {
+          "event": "1600m",
+          "name": "Noah Centineo",
+          "pr": 255.0
+        },
+        {
+          "event": "3200m",
+          "name": "Noah Centineo",
+          "pr": 555.0
+        },
+        {
+          "event": "High Jump",
+          "name": "Olivia Rodrigo",
+          "pr": 1.75
+        },
+        {
+          "event": "Long Jump",
+          "name": "Olivia Rodrigo",
+          "pr": 5.8
+        },
+        {
+          "event": "100m",
+          "name": "Peter Parker",
+          "pr": 10.9
+        },
+        {
+          "event": "200m",
+          "name": "Peter Parker",
+          "pr": 22.1
+        },
+        {
+          "event": "400m",
+          "name": "Peter Parker",
+          "pr": 48.9
+        }
+      ]
+    }
+  ]
+}

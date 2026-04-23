@@ -28,7 +28,7 @@ class Meet:
 
 if __name__ == "__main__":
     print("Load a meet from a file: ")
-    test_1 = Meet.from_file("tests/MeetTest.json")
+    test_1 = Meet.from_file("tests/LargeSimulationTest.json")
     print(f"{test_1.teams}")
 
     print()
